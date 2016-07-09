@@ -1,6 +1,7 @@
 # HapiJs MegaBoilerPlate
 
-It's not only a boiler plate. ITS A MEGA BOILER PLATE. With things... NOT SUPPOSED TO BE PART OF THE BIOLER PLATE. *bwahaha*
+It's not only a boiler plate. ITS A MEGA BOILER PLATE. 
+With things... NOT SUPPOSED TO BE PART OF THE BOILER PLATE. *bwahaha*
 
 **This boilerplate is setup for the ff:**
 * JADE (because clean)
@@ -22,16 +23,32 @@ api\
 config\
 templates\
 ```
-## Default Routes
+
+## Routing
+
+### Default Routes
 * `assets\style\**.less`  - compiles files less files on the fly
-* `assets\js\**.js`       - returns js files
 * `assets\lib\**.*`       - maps to *bower-components*
-* `assets\min\**.min.*`   - config file that contains a pseudo min a css/js file `TODO`
+* `assets\**`             - returns files as is
+* 
+
+
+### Controller Routes
+* `api\controller\Foo.js` - Maps to *host/foo*
+* `api\controller\BarController.js`  - Maps to *host/bar*
+
+*WARNING*: Do NOT name your controller `ControllerController`. You dick.
 
 **bower example usage**
 * Do `bower install jquery`
 * Find `bower_components\jquery\dist\jquery.min.js\`
 * Include `<script src="assets\lib\jquery\dist\jquery.min.js"></script>`
+
+## Controllers
+* Are just json objects. Which are directly plugged into `(new Hapi.Server).route(...)`
+* See http://hapijs.com/tutorials/routing
+* But they are auto included if they are in *api/controller/*
+* If no path is given it auto generates one from the filename
 
 # TODO
 * `npm build` Runs grunts tasks that builds the minis and shit like that
