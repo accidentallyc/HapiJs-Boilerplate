@@ -3,7 +3,7 @@
 const Hapi = require('hapi')
 
 const server = new Hapi.Server()
-server.connection({ port: process.env.PORT || 1338 })
+server.connection({ port: process.env.PORT || 1337 })
 
 //Replace global promise with bluebird
 GLOBAL.Promise = require('bluebird')
@@ -18,7 +18,7 @@ var plugins = [
 BUILD TODO:
 + on build merge the used css/js between //styles and //scripts
 */
-const configs = [ 'views','stylesheets','bower','files','controllers']
+const configs = [ 'views','stylesheets','bower','files','orm','controllers']
 
 server.register( plugins, (err) => {
   // Include Every Single Configuration file
