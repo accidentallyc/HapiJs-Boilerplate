@@ -6,6 +6,7 @@ With things... NOT SUPPOSED TO BE PART OF THE BOILER PLATE. *bwahaha*
 **This boilerplate is setup for the ff:**
 * JADE (because clean)
 * LESS (because its more maintainable)
+* SEQUELIZE (because ORM)
 * BOWER (because everything is in bower)
 * GRUNT (for DEPLOYMENT ONLY)
 * NODEMON.JS (configurations for nodemon)
@@ -49,6 +50,12 @@ templates\
 * See http://hapijs.com/tutorials/routing
 * But they are auto included if they are in *api/controller/*
 * If no path is given it auto generates one from the filename
+
+## Models
+* Are just json objects. Which are directly plugged into `sequelize.define(...,{...})`
+* See http://docs.sequelizejs.com/en/latest/
+* But they are auto included if they are in *api/model/*
+* The filename becomes a global. Ie. `api/model/User` can be accessed via `global.User`
 
 # TODO
 * `npm build` Runs grunts tasks that builds the minis and shit like that
