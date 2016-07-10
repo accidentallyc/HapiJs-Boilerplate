@@ -20,6 +20,7 @@ bower-components\
 assets\
   style\
 api\
+  model\
   controller\
 config\
 templates\
