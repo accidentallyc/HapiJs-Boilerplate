@@ -59,5 +59,3 @@ templates\
 
 # TODO
 * `npm build` Runs grunts tasks that builds the minis and shit like that
-* include sequelize in the boiler plate
-*
