@@ -23,8 +23,8 @@ If you don't want to install the cli stuff, you have to change `start.sh`
 `npm start` runs `start.sh` which runs nodemon +g grunt watch in the background
 
 ### Actual Start
-`$terminal1: grunt watch`
-`$terminal2: nodemon`
+`$terminal1: grunt watch`  
+`$terminal2: nodemon`  
 
 
 ## Folder Architecture
