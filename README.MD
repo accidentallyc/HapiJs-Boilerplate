@@ -8,10 +8,23 @@ With things... NOT SUPPOSED TO BE PART OF THE BOILER PLATE. *bwahaha*
 * LESS (because its more maintainable)
 * SEQUELIZE (because ORM)
 * BOWER (because everything is in bower)
-* GRUNT (for DEPLOYMENT ONLY)
+* GRUNT (for easieness ONLY)
 * NODEMON.JS (configurations for nodemon)
 * Some file architecture
 * Controller System
+
+## Getting Started
+
+### Installation
+`npm install && npm install -g grunt-cli && npm install -g nodemon`  
+If you don't want to install the cli stuff, you have to change `start.sh`
+
+### Lazy Start
+`npm start` runs `start.sh` which runs nodemon +g grunt watch in the background
+
+### Actual Start
+`$terminal1: grunt watch`
+`$terminal2: nodemon`
 
 
 ## Folder Architecture
@@ -57,6 +70,10 @@ templates\
 * See http://docs.sequelizejs.com/en/latest/
 * But they are auto included if they are in *api/model/*
 * The filename becomes a global. Ie. `api/model/User` can be accessed via `global.User`
+
+## Grunt Watch
+* The grunt watch simply concatenates all the files in this pattern `assets/**/*.js`
+* It moves it into `.tmp/js/app.min.js` ( in dev mode, its not minified )
 
 # TODO
 * `npm build` Runs grunts tasks that builds the minis and shit like that
