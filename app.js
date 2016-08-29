@@ -18,7 +18,7 @@ var plugins = [
 BUILD TODO:
 + on build merge the used css/js between //styles and //scripts
 */
-const configs = [ 'views','stylesheets','bower','files','orm','controllers']
+const configs = [ 'views','stylesheets','bower','files','orm','controllers','dev-watch']
 
 server.register( plugins, (err) => {
   // Include Every Single Configuration file
